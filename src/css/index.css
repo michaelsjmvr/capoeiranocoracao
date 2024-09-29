@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* Estilo da barra de navegação */
 .navbar {
     background-color: #333;
+    font-family: 'Montserrat', sans-serif; /* Adiciona a fonte ao menu */
 }
 
 /* Botão de menu no mobile */
@@ -27,6 +28,7 @@
 .navbar-nav .nav-link {
     color: white; /* Cor dos links */
     transition: color 0.3s ease-in-out; /* Suavização na transição */
+    font-family: 'Montserrat', sans-serif; /* Aplica a fonte aos links */
 }
 
 /* Hover no link */
@@ -57,6 +59,17 @@ main .container {
     max-width: 800px; /* Largura máxima */
 }
 
+/* Aplicar Montserrat para h2 e p */
+h2 {
+    font-family: 'Montserrat', sans-serif; /* Aplica a fonte ao título */
+    font-weight: 700; /* Negrito para o título */
+}
+
+p {
+    font-family: 'Montserrat', sans-serif; /* Aplica a fonte ao parágrafo */
+    font-weight: 400; /* Peso normal para o parágrafo */
+}
+
 /* Estilo para telas maiores (1400px ou mais) */
 @media (max-width: 1400px) {
     main {
@@ -81,6 +94,7 @@ main .container {
     main p {
         font-size: 16px; /* Reduz o tamanho do parágrafo */
     }
+    
     .navbar-nav {
         display: flex;
         justify-content: space-between;
