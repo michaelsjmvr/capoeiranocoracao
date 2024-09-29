@@ -39,8 +39,48 @@
     color: #efb432; /* Cor do link ativo */
 }
 
+/* Estilo padrão para o <main> */
+main {
+    background-image: url('/src/img/background-2.jpg'); /* Imagem de fundo */
+    background-size: cover; /* Cobre todo o elemento */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    padding: 300px 0; /* Espaçamento interno */
+    color: white; /* Cor do texto */
+}
+
+/* Container com estilo adicional */
+main .container {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    max-width: 800px; /* Largura máxima */
+}
+
+/* Estilo para telas maiores (1400px ou mais) */
+@media (max-width: 1400px) {
+    main {
+        padding: 145px 0; /* Reduz o espaçamento */
+    }
+}
+
 /* Estilo dos links no modo mobile */
 @media (max-width: 768px) {
+    main {
+        padding: 80px 0; /* Reduz o espaçamento */
+    }
+    main .container {
+        max-width: 90%; /* Define a largura como 90% do container */
+        padding: 10px; /* Reduz o padding */
+    }
+
+    main h2 {
+        font-size: 24px; /* Reduz o tamanho do título */
+    }
+
+    main p {
+        font-size: 16px; /* Reduz o tamanho do parágrafo */
+    }
     .navbar-nav {
         display: flex;
         justify-content: space-between;
