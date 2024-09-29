@@ -23,12 +23,6 @@
     background-color: #efb432;
 }
 
-/* Ícone ativo */
-.navbar-toggler-icon-active {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28%23222b%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    
-}
-
 /* Links do menu */
 .navbar-nav .nav-link {
     color: white; /* Cor dos links */
@@ -56,11 +50,6 @@
         gap: 10px; /* Espaçamento entre os itens */
     }
 
-    /* Centralizar o botão no modo mobile */
-    .navbar-toggler {
-        margin: 0 auto; /* Centraliza o botão */
-    }
-
     .navbar-collapse {
         justify-content: right; /* Centraliza o menu */
     }
@@ -70,6 +59,7 @@
     }
 }
 
+/* Ajustes gerais */
 .navbar-brand img {
     width: 100px;
     height: auto;
