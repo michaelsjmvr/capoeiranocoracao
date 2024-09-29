@@ -67,7 +67,7 @@ main .container {
 /* Estilo dos links no modo mobile */
 @media (max-width: 768px) {
     main {
-        padding: 80px 0; /* Reduz o espaçamento */
+        padding: 180px 0; /* Reduz o espaçamento */
     }
     main .container {
         max-width: 90%; /* Define a largura como 90% do container */
