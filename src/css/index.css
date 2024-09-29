@@ -104,10 +104,12 @@ footer p {
 
     main h2 {
         font-size: 24px; /* Reduz o tamanho do título */
+        text-align: center;
     }
 
     main p {
         font-size: 16px; /* Reduz o tamanho do parágrafo */
+        text-align: center;
     }
     
     .navbar-nav {
