@@ -71,6 +71,8 @@ p {
 }
 
 footer {
+    display: flex;
+    justify-content: space-around;
     background-color: #333; /* Cor de fundo */
     color: white; /* Cor do texto */
     text-align: center; /* Centraliza o texto */
@@ -128,6 +130,7 @@ footer p {
     footer {
         display: flex; /* Usando Flexbox */
         justify-content: space-between; /* Espaçamento entre os itens */
+        flex-direction: column;
         align-items: center; /* Alinha verticalmente */
         padding: 20px; /* Ajuste o padding conforme necessário */
     }
