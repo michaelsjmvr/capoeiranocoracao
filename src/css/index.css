@@ -70,6 +70,19 @@ p {
     font-weight: 400; /* Peso normal para o parágrafo */
 }
 
+footer {
+    background-color: #333; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 0px 0; /* Espaçamento interno */
+    font-family: 'Montserrat', sans-serif; /* Usa a fonte Montserrat */
+}
+
+/* Estilo padrão para mobile (cascata) */
+footer p {
+    margin: 10px 0; /* Espaçamento vertical entre parágrafos */
+}
+
 /* Estilo para telas maiores (1400px ou mais) */
 @media (max-width: 1400px) {
     main {
@@ -110,6 +123,21 @@ p {
 
     .navbar-brand img {
         width: 80px;
+    }
+
+    footer {
+        display: flex; /* Usando Flexbox */
+        justify-content: space-between; /* Espaçamento entre os itens */
+        align-items: center; /* Alinha verticalmente */
+        padding: 20px; /* Ajuste o padding conforme necessário */
+    }
+
+    footer p {
+        margin: 0; /* Remove margens para alinhamento adequado */
+    }
+
+    .footer-title {
+        display: none; /* Oculta o parágrafo "Capoeira no Coração (CNC)" */
     }
 }
 
