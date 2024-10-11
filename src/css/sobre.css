@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo da barra de navegação */
+.navbar {
+    background-color: #333;
+    font-family: 'Montserrat', sans-serif; /* Adiciona a fonte ao menu */
+}
+
+/* Botão de menu no mobile */
+.navbar-toggler {
+    border: 2px solid white; /* Borda do botão */
+    transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Ícone do botão de menu no mobile */
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Botão ativo */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    border-color: #efb432; /* Borda ativa */
+    background-color: #efb432;
+}
+
+/* Links do menu */
+.navbar-nav .nav-link {
+    color: white; /* Cor dos links */
+    transition: color 0.3s ease-in-out; /* Suavização na transição */
+    font-family: 'Montserrat', sans-serif; /* Aplica a fonte aos links */
+}
+
+/* Hover no link */
+.navbar-nav .nav-link:hover {
+    color: #efb432; /* Cor de hover */
+}
+
+/* Link ativo */
+header .navbar-nav .nav-link.active {
+    color: #efb432; /* Cor do link ativo */
+}
+
+main .secao1{
+    width: 100%;
+    height: 86.3vh;
+    background-color: white;
+    display: flex;
+    justify-content:space-around;
+    align-self: center;
+}
+
+main .secao1 .container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+}
+
+main .container h2{
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 3rem;
+    width: 450px;
+}
+
+main .container p{
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    width: 550px;
+    letter-spacing: 1px; /* Ajusta o espaçamento entre as letras */
+    line-height: 1.1;
+}
+
+main .cont1{
+    padding: 0px 100px;
+}
+
+main .cont2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .cont1 a{
+    background-color: #333;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    padding: 12px 12px;
+    text-decoration: none;
+    color: white;
+    transition: 0.8s;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+main .cont1 a:hover{
+    background-color: #efb432;
+}
+
+main .cont2 img{
+    width: 500px;
+    height: auto;
+}
+
+/* Ajustes gerais */
+.navbar-brand img {
+    width: 100px;
+    height: auto;
+    
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 0px 0; /* Espaçamento interno */
+    font-family: 'Montserrat', sans-serif; /* Usa a fonte Montserrat */
+}
+
+/* Estilo padrão para mobile (cascata) */
+footer p {
+    margin: 10px 0; /* Espaçamento vertical entre parágrafos */
+}
+/* Estilo para telas 1366 */
+@media (max-width: 1400px) {
+    main .secao1{
+        width: 100%;
+        height: 79.3vh;
+        background-color: white;
+    }
+
+    main .cont2 img{
+        width: 450px;
+        height: auto;
+    }
+}
+
+/* Estilo dos links no modo mobile */
+@media (max-width: 768px) {
+    
+    .navbar-nav {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column; /* Coloca os links um abaixo do outro */
+        align-items: center; /* Centraliza os links horizontalmente */
+        text-align: center;
+        gap: 10px; /* Espaçamento entre os itens */
+    }
+
+    .navbar-collapse {
+        justify-content: right; /* Centraliza o menu */
+    }
+
+    .navbar-brand img {
+        width: 80px;
+    }
+
+    footer {
+        display: flex; /* Usando Flexbox */
+        justify-content: space-between; /* Espaçamento entre os itens */
+        flex-direction: column;
+        align-items: center; /* Alinha verticalmente */
+        padding: 20px; /* Ajuste o padding conforme necessário */
+    }
+
+    footer p {
+        margin: 0; /* Remove margens para alinhamento adequado */
+    }
+
+    .footer-title {
+        display: none; /* Oculta o parágrafo "Capoeira no Coração (CNC)" */
+    }
+
+    main .secao1{
+        width: 100%;
+        height: 115.3vh;
+        background-color: white;
+    }
+
+    main .cont1{
+        z-index: 2;
+        padding: 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .cont2{
+        z-index: 1;
+        position: absolute;
+    }
+
+    main .cont1 h2, 
+    main .cont1 p{
+        text-align: center;
+    }
+
+    main .cont1 h2{
+        font-size: 2.5rem;
+    }
+
+    main .cont1 p{
+        font-size: 1.3rem;
+        width: 400px;
+    }
+
+    main .cont2 img{
+        opacity: 0.2;
+    }
+
+}
+
