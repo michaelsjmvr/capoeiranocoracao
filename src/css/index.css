@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 140px;
+    background-color: #252525;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0px 2%;
+    position: fixed;
+}
+
+header figure img{
+    width: 140px;
+    height: 140px;
+}
+
+/* Estilo básico para o link */
+header nav a {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    margin: 0px 6px;
+    position: relative; /* Necessário para o pseudo-elemento ::after */
+    transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+header nav a:hover {
+    color: #106EB5; /* Garante que a cor do texto continue branca */
+}
+
+/* Adiciona o sublinhado da esquerda para a direita */
+header nav a::after {
+    content: ''; /* Necessário para criar o pseudo-elemento */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* O sublinhado será do tamanho total do link */
+    height: 3px; /* Espessura do sublinhado */
+    background-color: #106EB5; /* Cor do sublinhado */
+    transform: scaleX(0); /* Inicialmente o sublinhado não é visível */
+    transform-origin: bottom right; /* Começa da direita e se expande para a esquerda */
+    transition: transform 0.3s ease-out; /* Efeito suave de transição */
+}
+
+/* Quando o mouse passa sobre o link */
+header nav a:hover::after {
+    transform: scaleX(1); /* O sublinhado aparece da esquerda para a direita */
+    transform-origin: bottom left; /* Agora o sublinhado se expande da esquerda para a direita */
+}
