@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 *{
     padding: 0;
@@ -6,7 +7,7 @@
     box-sizing: border-box;
 }
 
-header{
+.header-desktop{
     width: 100%;
     height: 140px;
     background-color: #252525;
@@ -17,13 +18,13 @@ header{
     position: fixed;
 }
 
-header figure img{
+.header-desktop figure img{
     width: 140px;
     height: 140px;
 }
 
 /* Estilo básico para o link */
-header nav a {
+.header-desktop nav a {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-size: 22px;
@@ -38,12 +39,12 @@ header nav a {
 }
 
 /* Efeito ao passar o mouse */
-header nav a:hover {
+.header-desktop nav a:hover {
     color: #106EB5; /* Garante que a cor do texto continue branca */
 }
 
 /* Adiciona o sublinhado da esquerda para a direita */
-header nav a::after {
+.header-desktop nav a::after {
     content: ''; /* Necessário para criar o pseudo-elemento */
     position: absolute;
     bottom: 0;
@@ -57,7 +58,99 @@ header nav a::after {
 }
 
 /* Quando o mouse passa sobre o link */
-header nav a:hover::after {
+.header-desktop nav a:hover::after {
     transform: scaleX(1); /* O sublinhado aparece da esquerda para a direita */
     transform-origin: bottom left; /* Agora o sublinhado se expande da esquerda para a direita */
+}
+
+.header-mobile{
+    display: none;
+}
+
+/* Media Query para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    .header-desktop {
+        display: none; /* Esconde o cabeçalho desktop em dispositivos móveis */
+    }
+
+    .header-mobile {
+        background-color: #252525;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        padding: 0px 5%;
+    }
+    .header-mobile nav{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: #252525;
+        top: 0;
+        left: 0;
+    }
+
+    .header-mobile nav a {
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-size: 22px;
+        font-weight: 600;
+        font-style: normal;
+        color: white;
+        list-style: none;
+        text-decoration: none;
+        margin: 6px 0px;
+        position: relative; /* Necessário para o pseudo-elemento ::after */
+        transition: 0.3s;
+    }
+    
+    /* Efeito ao passar o mouse */
+    .header-mobile nav a:hover {
+        color: #106EB5; /* Garante que a cor do texto continue branca */
+    }
+
+    .header-mobile nav a:focus {
+        color: #106EB5; /* Garante que a cor do texto continue branca */
+    }
+
+    .header-mobile nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-mobile nav .menu-toggle-close{
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-right: 5%;
+        margin-top: 5%;
+    }
+
+    .header-mobile .menu-toggle-open{
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-size: 40px;
+        font-weight: 600;
+        font-style: normal;
+        color: white;
+        list-style: none;
+        text-decoration: none;
+        margin: 6px 0px;
+        position: relative; /* Necessário para o pseudo-elemento ::after */
+        transition: 0.3s;
+    }
+
+    /* Efeito ao passar o mouse */
+    .header-mobile.menu-toggle-open:hover {
+        color: #106EB5; /* Garante que a cor do texto continue branca */
+    }
+
+    .header-mobile.menu-toggle-open:focus {
+        color: #106EB5; /* Garante que a cor do texto continue branca */
+    }
+
 }

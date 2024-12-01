@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/index.css">
     <link rel="icon" type="image/png" href="/src/img/logo/001.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Capoeira no Coração</title>
 </head>
 <body>
-    <header>
+    <header class="header-desktop">
         <figure>
             <img src="/src/img/logo/001.png" alt="Logo Capoeira no Coração">
         </figure>
@@ -24,8 +25,31 @@
             </ul>
         </nav>
     </header>
-    <section>
+    <header class="header-mobile">
+        <figure>
+            <img src="/src/img/logo/001.png" alt="Logo Capoeira no Coração">
+        </figure>
+        <!-- Botão de menu (ícone hamburguer) -->
+        <a href="#" class="menu-toggle-open"><i class="bi bi-list"></i></a>
         
+        <!-- Navegação (ul com links dentro de li) -->
+        <nav>
+            <a href="#" class="menu-toggle-close"><i class="bi bi-x-lg"></i></a>
+            <ul>
+                <a href="#">Início</a>
+                <a href="#">Sobre Nós</a>
+                <a href="#">Aulas</a>
+                <a href="#">Agenda</a>
+                <a href="#">Graduações</a>
+                <a href="#">Galeria</a>
+                <a href="#">Contato</a>
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+
     </section>
+    <script src="/src/js/index.js"></script>
 </body>
 </html>
